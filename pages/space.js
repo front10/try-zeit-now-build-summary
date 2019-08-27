@@ -3,6 +3,7 @@ import React from "react";
 import DestinationSpace from "../components/DestinationSpace";
 import Text from "../components/Text";
 import Box from "../components/Box";
+import Title from "../components/Title";
 import settings from "../helpers/destinationSpaceSettings";
 
 const Home = () => (
@@ -17,16 +18,7 @@ const Home = () => (
     </Head>
     <div className="layout">
       <div className="tiny-container">
-        <h1 className="title">
-          <img
-            className="logo"
-            with="32"
-            height="32"
-            alt=""
-            src="/static/front10.png"
-          />
-          Build summary in the space
-        </h1>
+        <Title text="Build summary in the space" imgSrc="/static/front10.png"/>
         <DestinationSpace {...settings.destinationSpace} />
         <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
