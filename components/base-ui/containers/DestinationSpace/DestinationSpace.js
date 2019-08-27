@@ -6,6 +6,7 @@ import ImageHeader from "../../elements/ImageHeader";
 import Header from "../../elements/Header";
 import Box from "../../elements/Box";
 import Text from "../../elements/Text";
+import DestinationItem from "../../elements/DestinationItem";
 // import ListColumns from '../../lists/ListColumns';
 // import FareItemMediumSize from '../FareItemMediumSize';
 // import ItemContainer from './atoms/ItemContainer';
@@ -53,6 +54,9 @@ const DestinationSpace = props => {
       {showCityName && (
         <Header id={id} {...header} cust omHtml={`Going to ${name}`} tag="h5" />
       )}
+      {data.map(itemData => (
+        <DestinationItem data={itemData} />
+      ))}
       {/* <ListColumns
         {...componentSettings}
         columnNumbers={columnNumbers}
