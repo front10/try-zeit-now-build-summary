@@ -9,7 +9,6 @@ export default {
       labelStyle: {
         fontSize: "8",
         textTransform: "uppercase",
-        fontWeight: "bold",
         textColor: "white"
       },
       rounded: "3",
