@@ -22,7 +22,7 @@ export default {
     },
     componentSettings: {
       itemSettings: {
-        flavor: "yellowInverted",
+        flavor: "dark",
         // here
         rounded: "3",
         padding: "3",
@@ -61,7 +61,8 @@ export default {
           fontWeight: "bold",
           textTransform: "uppercase",
           rounded: "0",
-          paddingWidth: "5"
+          paddingWidth: "5",
+          borderWidth: "0"
         },
         priceStyles: {
           width: "100",
