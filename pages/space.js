@@ -1,8 +1,6 @@
 import Head from "next/head";
 import React from "react";
 import DestinationSpace from "../components/DestinationSpace";
-import Col from "../components/Col";
-import Row from "../components/Row";
 import Text from "../components/Text";
 import Box from "../components/Box";
 
