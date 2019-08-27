@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { getUuid } from "@front10/helpers/dist/uuid";
 import useStyles from "@front10/helpers/dist/UseStyles";
 import ImageHeader from "../ImageHeader";
 import Header from "../Header";
@@ -23,7 +22,6 @@ const DestinationSpace = props => {
     focusable
   } = props;
   const [className, style] = useStyles(props);
-  const id = getUuid();
   return (
     <Box
       focusable={focusable}
@@ -32,7 +30,6 @@ const DestinationSpace = props => {
       style={style}
       focusReferences={focusReferences}
       onKeyDown={onKeyDown}
-      dataTestId="destinationItem"
     >
       {showImage && (
         <ImageHeader {...imageProps} image={image}>
@@ -40,7 +37,7 @@ const DestinationSpace = props => {
         </ImageHeader>
       )}
       {/* {showCityName && (
-        <Header id={id} {...header} customHtml={`Going to ${name}`} tag="h5" />
+        <Header {...header} customHtml={`Going to ${name}`} tag="h5" />
       )} */}
       {data.map(itemData => (
         <DestinationItem data={itemData} {...itemSettings} />
