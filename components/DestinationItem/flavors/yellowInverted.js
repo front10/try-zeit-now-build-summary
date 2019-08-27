@@ -6,7 +6,7 @@ export default {
   borderWidth: "1",
   rounded: "3",
   padding: "3",
-  marginBottom: "2",
+  marginHeight: "1",
   fontWeight: "bold",
   fareBodyItem: {
     flex: "2",
