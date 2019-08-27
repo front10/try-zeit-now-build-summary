@@ -85,7 +85,7 @@ const Home = () => (
             }
           ]}
         />
-        <Box textAlign="center">
+        <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
         </Box>
       </div>
