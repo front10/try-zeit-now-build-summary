@@ -4,7 +4,7 @@ export default {
   },
   rounded: "3",
   padding: "3",
-  marginBottom: "2",
+  marginHeight: "1",
   fontWeight: "bold",
   fareBodyItem: {
     flex: "2",
