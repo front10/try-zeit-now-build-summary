@@ -1,98 +1,90 @@
-import Head from "next/head";
 import React from "react";
-import DestinationSpace from "../components/base-ui/containers/DestinationSpace";
-import Col from "../components/base-ui/elements/Col";
-import Row from "../components/base-ui/elements/Row";
+import Link from "next/link";
+import Head from "next/head";
+import Nav from "../components/nav";
 
 const Home = () => (
   <div>
     <Head>
-      <title>Destination Space</title>
-      <link
-        href="https://cdn.front10.com/bootstrap4/index.min.css"
-        rel="stylesheet"
-      />
+      <title>Home</title>
     </Head>
 
+    <Nav />
+
     <div className="hero">
-      <h1 className="title">Welcome to Destination Space!</h1>
-      <Row>
-        <Col md="6">
-          <DestinationSpace
-            image="https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-            name="The Space"
-            imageProps={{
-              labelStyle: {
-                fontSize: "8",
-                textTransform: "uppercase",
-                fontWeight: "bold",
-                textColor: "white"
-              },
-              rounded: "3",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center"
-            }}
-            header={{
-              fontWeight: "bold",
-              marginTop: "2"
-            }}
-            componentSettings={{
-              itemSettings: {
-                flavor: "basic"
-              }
-            }}
-            data={[
-              {
-                destination: "To Mars",
-                departureDate: "03/13/2020",
-                returnDate: "04/04/2020",
-                rocket: "Falcon 9",
-                weight: 4020,
-                measureUnit: "kg",
-                price: "62",
-                currencySymbol: "$",
-                currencyCode: "M"
-              },
-              {
-                destination: "To Saturn",
-                departureDate: "07/13/2020",
-                returnDate: "09/09/2020",
-                rocket: "Falcon Heavy",
-                weight: 168000,
-                measureUnit: "kg",
-                price: "90",
-                currencySymbol: "$",
-                currencyCode: "M"
-              },
-              {
-                destination: "To Jupiter",
-                departureDate: "11/13/2020",
-                returnDate: "10/03/2020",
-                rocket: "Dragon",
-                weight: 4020,
-                measureUnit: "kg",
-                price: "78",
-                currencySymbol: "$",
-                currencyCode: "M"
-              }
-            ]}
-            translate={() => {}}
-          />
-        </Col>
-      </Row>
+      <h1 className="title">Welcome to Next.js!</h1>
+      <p className="description">
+        To get started, edit <code>pages/index.js</code> and save to reload.
+      </p>
+
+      <div className="row">
+        <Link href="/space">
+          <a className="card">
+            <h3>Getting Started &rarr;</h3>
+            <p>Learn more about Next.js on GitHub and in their examples.</p>
+          </a>
+        </Link>
+        <Link href="https://github.com/zeit/next.js/tree/master/examples">
+          <a className="card">
+            <h3>Examples &rarr;</h3>
+            <p>Find other example boilerplates on the Next.js GitHub.</p>
+          </a>
+        </Link>
+        <Link href="https://github.com/zeit/next.js">
+          <a className="card">
+            <h3>Create Next App &rarr;</h3>
+            <p>Was this tool helpful? Let us know how we can improve it!</p>
+          </a>
+        </Link>
+      </div>
     </div>
 
-    <style jsx global>
-      {`
-        body {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-            "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Noto Color Emoji";
-        }
-      `}
-    </style>
+    <style jsx>{`
+      .hero {
+        width: 100%;
+        color: #333;
+      }
+      .title {
+        margin: 0;
+        width: 100%;
+        padding-top: 80px;
+        line-height: 1.15;
+        font-size: 48px;
+      }
+      .title,
+      .description {
+        text-align: center;
+      }
+      .row {
+        max-width: 880px;
+        margin: 80px auto 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .card {
+        padding: 18px 18px 24px;
+        width: 220px;
+        text-align: left;
+        text-decoration: none;
+        color: #434343;
+        border: 1px solid #9b9b9b;
+      }
+      .card:hover {
+        border-color: #067df7;
+      }
+      .card h3 {
+        margin: 0;
+        color: #067df7;
+        font-size: 18px;
+      }
+      .card p {
+        margin: 0;
+        padding: 12px 0 0;
+        font-size: 13px;
+        color: #333;
+      }
+    `}</style>
   </div>
 );
 
