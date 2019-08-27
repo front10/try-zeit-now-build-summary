@@ -39,23 +39,7 @@ const Home = () => (
             }}
             componentSettings={{
               itemSettings: {
-                flavor: "fareItemPopularDestinations",
-                padding: "0",
-                fareFooterItem: {
-                  padding: "2",
-                  style: {
-                    background:
-                      "-webkit-linear-gradient(170deg, #ffec32 80%, #ffffff 80%)",
-                    borderRadius: "0px 6px 6px 0px"
-                  }
-                },
-                fareBodyItem: {
-                  padding: "2"
-                },
-                fareItemCallToAction: {
-                  rounded: "0",
-                  style: { minWidth: "175px" }
-                }
+                flavor: "basic"
               }
             }}
             data={[
@@ -93,6 +77,7 @@ const Home = () => (
                 currencyCode: "M"
               }
             ]}
+            translate={() => {}}
           />
         </Col>
       </Row>
