@@ -3,7 +3,7 @@ import React from "react";
 import DestinationSpace from "../components/DestinationSpace";
 import Text from "../components/Text";
 import Box from "../components/Box";
-import settings from "../settings";
+import settings from "../helpers/destinationSpaceSettings";
 
 const Home = () => (
   <div>
@@ -16,7 +16,7 @@ const Home = () => (
     </Head>
     <div className="layout">
       <div className="tiny-container">
-        <h1 className="title fr-text-secondary">
+        <h1 className="title">
           <img
             className="logo"
             with="32"
