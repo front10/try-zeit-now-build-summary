@@ -3,7 +3,6 @@ export default {
     background: "-webkit-linear-gradient(170deg, #F8CF34 28%, #ffffff 28%)"
   },
   border: true,
-  borderWidth: "1",
   rounded: "3",
   padding: "3",
   marginBottom: "2",
