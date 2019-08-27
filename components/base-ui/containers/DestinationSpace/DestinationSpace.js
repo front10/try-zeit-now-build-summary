@@ -18,7 +18,6 @@ const DestinationSpace = props => {
     name,
     data,
     componentSettings,
-    translate,
     header,
     showImage,
     onKeyDown,
@@ -42,12 +41,11 @@ const DestinationSpace = props => {
       dataTestId="destinationItem"
     >
       {showImage && (
-        <ImageHeader {...imageProps} image={image} translate={translate}>
+        <ImageHeader {...imageProps} image={image}>
           <Text {...labelStyle}>{name}</Text>
           {/* <ItemContainer
             {...imageProps.container}
             text={name}
-            translate={translate}
           /> */}
         </ImageHeader>
       )}
@@ -64,7 +62,6 @@ const DestinationSpace = props => {
         itemsData={data}
         oneColumn={oneColumn}
         ariaLabelledBy={id}
-        translate={translate}
       /> */}
     </Box>
   );
@@ -96,15 +93,11 @@ DestinationSpace.propTypes = {
    */
   header: PropTypes.objectOf(PropTypes.any),
   /**
-   * Function to translate the component
-   */
-  translate: PropTypes.func,
-  /**
    * Determine if the image will be displayed in the component.
    */
   showImage: PropTypes.bool,
   /**
-   * Function to translate the component
+   * Column numbers
    */
   columnNumbers: PropTypes.number,
   /**
@@ -145,7 +138,6 @@ DestinationSpace.defaultProps = {
   },
   componentSettings: {},
   header: {},
-  translate: () => {},
   showImage: true,
   showCityName: true,
   showHeaderBreak: false,

@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getUuid } from '@front10/helpers/dist/uuid';
-import useStyles from '@front10/helpers/dist/UseStyles';
-import Box from '../Box';
-import Text from '../Text';
+import React from "react";
+import PropTypes from "prop-types";
+import { getUuid } from "@front10/helpers/dist/uuid";
+import useStyles from "@front10/helpers/dist/UseStyles";
+import Box from "../Box";
+import Text from "../Text";
 import {
   isElementInViewport,
   loadImage,
   getScrollParent
-} from '../../helpers/imageLazyLoading';
+} from "../../helpers/imageLazyLoading";
 
 class ImageHeader extends React.Component {
   constructor(props) {
@@ -38,11 +38,14 @@ class ImageHeader extends React.Component {
 
   onUpdate = prevProps => {
     const { image, imageHeight, imageWidth } = this.props;
-    if (image !== prevProps.image || (image === prevProps.image && this.loaded === false)) {
+    if (
+      image !== prevProps.image ||
+      (image === prevProps.image && this.loaded === false)
+    ) {
       this.loaded = false;
       if (this.image) {
         this.image.setAttribute(
-          'style',
+          "style",
           `background-image:none;height:${imageHeight};width:${imageWidth};backgroundColor:lightgray;animation:pulse 1s infinite ease-in-out`
         );
         if (isElementInViewport(this.id)) this.handleLoadImage();
@@ -74,8 +77,8 @@ class ImageHeader extends React.Component {
 
   addEventListener = () => {
     this.scrollParents.map(node => {
-      if (node && typeof node.addEventListener === 'function') {
-        node.addEventListener('scroll', this.listener, true);
+      if (node && typeof node.addEventListener === "function") {
+        node.addEventListener("scroll", this.listener, true);
       }
       return node;
     });
@@ -83,30 +86,37 @@ class ImageHeader extends React.Component {
 
   removeEventListener = () => {
     this.scrollParents.map(node => {
-      if (node && typeof node.addEventListener === 'function')
-        node.removeEventListener('scroll', this.listener, true);
+      if (node && typeof node.addEventListener === "function")
+        node.removeEventListener("scroll", this.listener, true);
       return node;
     });
   };
 
   noLabelImage = () => {
-    const { translate, noLabelImageSettings } = this.props;
+    const { noLabelImageSettings } = this.props;
     return (
       <Box className="cmp-image-label" display="none">
-        <Text {...noLabelImageSettings}>{translate('cmp-image-header-label-not-image-found')}</Text>
+        <Text {...noLabelImageSettings}>Image not found</Text>
       </Box>
     );
   };
 
   render = () => {
-    const { imageHeight, imageWidth, hoverEffect, alt, focusable, children } = this.props;
+    const {
+      imageHeight,
+      imageWidth,
+      hoverEffect,
+      alt,
+      focusable,
+      children
+    } = this.props;
     const [className, style] = useStyles(this.props);
     const loadingImageStyle = {
       ...style,
       height: imageHeight,
       width: imageWidth,
-      backgroundColor: 'lightgray',
-      animation: 'pulse 1s infinite ease-in-out'
+      backgroundColor: "lightgray",
+      animation: "pulse 1s infinite ease-in-out"
     };
     return (
       <Box
@@ -156,14 +166,14 @@ ImageHeader.propTypes = {
    * Effect apply of the image
    */
   hoverEffect: PropTypes.oneOf([
-    'grayscale',
-    'fadeIn',
-    'scale',
-    'blur',
-    'opacity',
-    'sepia',
-    'lightly',
-    'dark'
+    "grayscale",
+    "fadeIn",
+    "scale",
+    "blur",
+    "opacity",
+    "sepia",
+    "lightly",
+    "dark"
   ]),
   /**
    * Enable focusable in this components.
@@ -172,30 +182,31 @@ ImageHeader.propTypes = {
   /**
    *  Children of the component
    */
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   pathNoImageFound: PropTypes.string,
-  translate: PropTypes.func,
   noLabelImageSettings: PropTypes.objectOf(PropTypes.any)
 };
 ImageHeader.defaultProps = {
-  image: '',
+  image: "",
   alt: null,
-  imageHeight: '250px',
-  imageWidth: '100%',
+  imageHeight: "250px",
+  imageWidth: "100%",
   hoverEffect: null,
   focusable: true,
   children: null,
   pathNoImageFound:
-    'https://res.cloudinary.com/dakp804eh/image/upload/v1561045947/airmodules/Utils/NoImageFound.svg',
-  translate: () => {},
+    "https://res.cloudinary.com/dakp804eh/image/upload/v1561045947/airmodules/Utils/NoImageFound.svg",
   noLabelImageSettings: {
-    position: 'absolute',
-    padding: '3',
-    bottom: '0',
-    right: '0'
+    position: "absolute",
+    padding: "3",
+    bottom: "0",
+    right: "0"
   }
 };
 
-ImageHeader.componentName = 'ImageHeader';
+ImageHeader.componentName = "ImageHeader";
 
 export default ImageHeader;

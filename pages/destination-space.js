@@ -94,7 +94,6 @@ const Home = () => (
                 currencyCode: "M"
               }
             ]}
-            translate={() => {}}
           />
         </Col>
       </Row>
