@@ -21,7 +21,7 @@ export default {
     },
     componentSettings: {
       itemSettings: {
-        flavor: "yellow",
+        flavor: "yellowInverted",
         // here
         rounded: "3",
         padding: "3",
