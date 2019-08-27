@@ -18,7 +18,7 @@ const Home = () => (
 
     <div className="fr-row">
       <div className="fr-col-lg-6 fr-offset-lg-3 fr-col-xl-4 fr-offset-xl-4">
-        <h1 className="title">Welcome to Destination Space!</h1>
+        <h1 className="title fr-text-secondary">Build summary in the space</h1>
         <DestinationSpace
           image="https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
           name="The Space"
@@ -71,7 +71,7 @@ const Home = () => (
               departureDate: "11/13/2020",
               returnDate: "10/03/2020",
               rocket: "Dragon",
-              weight: 4020,
+              weight: 6000,
               measureUnit: "kg",
               price: "78",
               currencySymbol: "$",
@@ -80,7 +80,7 @@ const Home = () => (
           ]}
         />
         <Box textAlign="center">
-          <Text>Made with love by Front10</Text>
+          <Text>Made with 🖤 by Front10</Text>
         </Box>
       </div>
     </div>
@@ -92,6 +92,9 @@ const Home = () => (
             "Helvetica Neue", Arial, "Noto Sans", sans-serif,
             "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
             "Noto Color Emoji";
+        }
+        .title {
+          font-weight: normal;
         }
       `}
     </style>
