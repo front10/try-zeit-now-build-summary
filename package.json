@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@front10/helpers": "^1.6.1-alpha",
     "next": "9.0.5",
     "react": "16.9.0",
     "react-dom": "16.9.0"

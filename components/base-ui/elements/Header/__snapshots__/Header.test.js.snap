@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render all 1`] = `
+<h2
+  className="fr-h2 "
+  id={null}
+  style={
+    Object {
+      "filter": undefined,
+    }
+  }
+>
+  
+</h2>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render all 1`] = `
+<span
+  aria-hidden={null}
+  aria-label={null}
+  className="fr-span "
+  htmlFor={null}
+  id={null}
+  role={null}
+  style={
+    Object {
+      "filter": undefined,
+    }
+  }
+/>
+`;
