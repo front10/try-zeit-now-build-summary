@@ -1,5 +1,5 @@
 import React from "react";
-import { mergeDeep } from "../helpers/utils";
+import { mergeDeep } from "./utils";
 
 const withFlavors = (WrappedComponent, defaultProps) => {
   const Flavor = props => {

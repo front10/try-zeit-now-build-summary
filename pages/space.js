@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React from "react";
-import DestinationSpace from "../components/base-ui/containers/DestinationSpace";
-import Col from "../components/base-ui/elements/Col";
-import Row from "../components/base-ui/elements/Row";
+import DestinationSpace from "../components/DestinationSpace";
+import Col from "../components/Col";
+import Row from "../components/Row";
 
 const Home = () => (
   <div>

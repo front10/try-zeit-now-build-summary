@@ -2,14 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { getUuid } from "@front10/helpers/dist/uuid";
 import useStyles from "@front10/helpers/dist/UseStyles";
-import ImageHeader from "../../elements/ImageHeader";
-import Header from "../../elements/Header";
-import Box from "../../elements/Box";
-import Text from "../../elements/Text";
-import DestinationItem from "../../elements/DestinationItem";
-// import ListColumns from '../../lists/ListColumns';
-// import FareItemMediumSize from '../FareItemMediumSize';
-// import ItemContainer from './atoms/ItemContainer';
+import ImageHeader from "../ImageHeader";
+import Header from "../Header";
+import Box from "../Box";
+import Text from "../Text";
+import DestinationItem from "../DestinationItem";
 
 const DestinationSpace = props => {
   const {
@@ -21,15 +18,12 @@ const DestinationSpace = props => {
     header,
     showImage,
     onKeyDown,
-    columnNumbers,
     showCityName,
     focusReferences,
-    focusable,
-    oneColumn
+    focusable
   } = props;
   const [className, style] = useStyles(props);
   const id = getUuid();
-  const origin = data[0] ? data[0].origin : "";
   return (
     <Box
       focusable={focusable}
@@ -43,10 +37,6 @@ const DestinationSpace = props => {
       {showImage && (
         <ImageHeader {...imageProps} image={image}>
           <Text {...labelStyle}>{name}</Text>
-          {/* <ItemContainer
-            {...imageProps.container}
-            text={name}
-          /> */}
         </ImageHeader>
       )}
       {showCityName && (
@@ -55,14 +45,6 @@ const DestinationSpace = props => {
       {data.map(itemData => (
         <DestinationItem data={itemData} {...itemSettings} />
       ))}
-      {/* <ListColumns
-        {...componentSettings}
-        columnNumbers={columnNumbers}
-        ItemComponentInstance={FareItemMediumSize}
-        itemsData={data}
-        oneColumn={oneColumn}
-        ariaLabelledBy={id}
-      /> */}
     </Box>
   );
 };
@@ -97,10 +79,6 @@ DestinationSpace.propTypes = {
    */
   showImage: PropTypes.bool,
   /**
-   * Column numbers
-   */
-  columnNumbers: PropTypes.number,
-  /**
    * Show or hide the city name
    */
   showCityName: PropTypes.bool,
@@ -119,15 +97,7 @@ DestinationSpace.propTypes = {
   /**
    * Show header in two lines
    */
-  showHeaderBreak: PropTypes.bool,
-  /**
-   * Traffix variants
-   */
-  traffixVariant: PropTypes.string,
-  /**
-   * Show list in one column
-   */
-  oneColumn: PropTypes.bool
+  showHeaderBreak: PropTypes.bool
 };
 DestinationSpace.defaultProps = {
   image: "",
@@ -141,11 +111,9 @@ DestinationSpace.defaultProps = {
   showImage: true,
   showCityName: true,
   showHeaderBreak: false,
-  columnNumbers: null,
   onKeyDown: () => {},
   focusReferences: () => {},
-  focusable: false,
-  oneColumn: true
+  focusable: false
 };
 DestinationSpace.componentName = "DestinationSpace";
 
