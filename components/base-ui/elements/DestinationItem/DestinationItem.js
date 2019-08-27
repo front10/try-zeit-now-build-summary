@@ -6,12 +6,48 @@ import Withflavors from "../../helpers/WithFlavors";
 import Box from "../Box";
 import Text from "../Text";
 import Button from "../Button";
+import Destination from "./atoms/DestinationAtom";
+import DepartureReturnDate from "./atoms/DepartureReturnDateAtom";
+import RocketType from "./atoms/RocketTypeAtom";
+import Price from "./atoms/PriceAtom";
+import CallToAction from "./atoms/CallToActionAtom";
 
 const DestinationItem = props => {
   const [className, style] = useStyles(props);
+  const {
+    showDestination,
+    showDepartureReturnDate,
+    showRocketType,
+    showPrice,
+    showCallToAction,
+    departureReturnDateStyles,
+    destinationStyles,
+    rocketTypeStyles,
+    priceStyles,
+    callToActionStyles,
+    fareBodyItem,
+    fareFooterItem,
+    data
+  } = props;
 
   return (
-    <Box className="DestinationItem" className={className} style={style}></Box>
+    <Box
+      display="flex"
+      className={`DestinationItem ${className}`}
+      style={style}
+    >
+      <Box {...fareBodyItem}>
+        {showDestination && <Destination {...data} {...destinationStyles} />}
+        {showDepartureReturnDate && (
+          <DepartureReturnDate {...data} {...departureReturnDateStyles} />
+        )}
+        {showRocketType && <RocketType {...data} {...rocketTypeStyles} />}
+      </Box>
+      <Box {...fareFooterItem}>
+        {showPrice && <Price {...data} {...priceStyles} />}
+        {showCallToAction && <CallToAction {...data} {...callToActionStyles} />}
+      </Box>
+    </Box>
   );
 };
 
