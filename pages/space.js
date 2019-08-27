@@ -15,7 +15,7 @@ const Home = () => (
       />
     </Head>
     <div className="layout">
-      <div className="container">
+      <div className="tiny-container">
         <h1 className="title fr-text-secondary">
           <img
             className="logo"
@@ -27,7 +27,7 @@ const Home = () => (
           Build summary in the space
         </h1>
         <DestinationSpace {...settings.destinationSpace} />
-        <Box textAlign="center">
+        <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
         </Box>
       </div>
@@ -48,7 +48,7 @@ const Home = () => (
           display: flex;
           justify-content: center;
         }
-        .container {
+        .tiny-container {
           width: 600px;
         }
         .logo {
