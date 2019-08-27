@@ -4,7 +4,6 @@ import DestinationSpace from "../components/DestinationSpace";
 import Text from "../components/Text";
 import Box from "../components/Box";
 import settings from "../settings";
-import data from "../helpers/data.json";
 
 const Home = () => (
   <div>
@@ -27,8 +26,8 @@ const Home = () => (
           />
           Build summary in the space
         </h1>
-        <DestinationSpace {...settings.destinationSpace} data={data} />
-        <Box textAlign="center">
+        <DestinationSpace {...settings.destinationSpace} />
+        <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
         </Box>
       </div>

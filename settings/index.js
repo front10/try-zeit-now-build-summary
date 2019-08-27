@@ -1,3 +1,5 @@
+import dataMock from "../helpers/data.json";
+
 export default {
   destinationSpace: {
     image:
@@ -72,6 +74,7 @@ export default {
           }
         }
       }
-    }
+    },
+    data: dataMock
   }
 };
