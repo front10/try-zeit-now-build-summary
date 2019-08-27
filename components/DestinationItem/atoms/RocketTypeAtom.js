@@ -10,26 +10,26 @@ const RocketTypeAtom = props => {
   const {
     rocket,
     weight,
-    meassureUnit,
+    measureUnit,
     separator,
     showRocket,
     showWeight,
-    showMeassureUnit,
+    showMeasureUnit,
     showSeparator,
     rocketStyles,
     weightStyles,
-    meassureUnitStyles,
+    measureUnitStyles,
     separatorStyles
   } = props;
 
   return (
     <Box className={className} style={style}>
       {showRocket && <Text {...rocketStyles}>{rocket}</Text>}
-      {showSeparator && showRocket && showWeight && showMeassureUnit && (
+      {showSeparator && showRocket && showWeight && showMeasureUnit && (
         <Text {...separatorStyles}>{separator}</Text>
       )}
       {showWeight && <Text {...weightStyles}>{weight}</Text>}
-      {showMeassureUnit && <Text {...meassureUnitStyles}>{meassureUnit}</Text>}
+      {showMeasureUnit && <Text {...measureUnitStyles}>{measureUnit}</Text>}
     </Box>
   );
 };
@@ -37,30 +37,30 @@ const RocketTypeAtom = props => {
 RocketTypeAtom.propTypes = {
   rocket: PropTypes.string,
   weight: PropTypes.string,
-  meassureUnit: PropTypes.string,
+  measureUnit: PropTypes.string,
   separator: PropTypes.string,
   showRocket: PropTypes.bool,
   showWeight: PropTypes.bool,
-  showMeassureUnit: PropTypes.bool,
+  showMeasureUnit: PropTypes.bool,
   showSeparator: PropTypes.bool,
   rocketStyles: PropTypes.objectOf(PropTypes.any),
   weightStyles: PropTypes.objectOf(PropTypes.any),
-  meassureUnitStyles: PropTypes.objectOf(PropTypes.any),
+  measureUnitStyles: PropTypes.objectOf(PropTypes.any),
   separatorStyles: PropTypes.objectOf(PropTypes.any)
 };
 
 RocketTypeAtom.defaultProps = {
   rocket: "",
   weight: "",
-  meassureUnit: "",
+  measureUnit: "",
   separator: "",
   showRocket: true,
   showWeight: true,
-  showMeassureUnit: true,
+  showMeasureUnit: true,
   showSeparator: true,
   rocketStyles: {},
   weightStyles: {},
-  meassureUnitStyles: {},
+  measureUnitStyles: {},
   separatorStyles: {}
 };
 

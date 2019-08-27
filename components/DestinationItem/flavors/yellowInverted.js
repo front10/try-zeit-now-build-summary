@@ -1,7 +1,9 @@
 export default {
   style: {
-    background: "-webkit-linear-gradient(170deg, #ffec32 28%, #efefef 28%)"
+    background: "-webkit-linear-gradient(170deg, #000000 28%, #ffffff 28%)"
   },
+  border: true,
+  borderWidth: "1",
   rounded: "3",
   padding: "3",
   marginBottom: "2",
@@ -15,7 +17,8 @@ export default {
     flex: "1",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "end"
+    justifyContent: "end",
+    textColor: "white"
   },
   destinationStyles: {
     fontSize: "5",
@@ -36,11 +39,16 @@ export default {
   },
   callToActionStyles: {
     callToActionText: "Let's go",
-    color: "primary",
+    textColor: "black",
+    color: "none",
     fontWeight: "bold",
     textTransform: "uppercase",
     rounded: "0",
-    paddingWidth: "5"
+    paddingWidth: "5",
+    style: {
+      backgroundColor: "#f8cf34",
+      borderColor: "black"
+    }
   },
   priceStyles: {
     width: "100",
