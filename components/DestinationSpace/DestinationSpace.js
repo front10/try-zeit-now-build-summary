@@ -14,10 +14,9 @@ const DestinationSpace = props => {
     name,
     data,
     componentSettings: { itemSettings },
-    header,
+    components,
     showImage,
     onKeyDown,
-    showCityName,
     focusReferences,
     focusable
   } = props;
@@ -32,12 +31,12 @@ const DestinationSpace = props => {
       onKeyDown={onKeyDown}
     >
       {showImage && (
-        <ImageHeader {...imageProps} image={image}>
-          <Text {...labelStyle}>{name}</Text>
+        <ImageHeader {...components.imageHeader} image={image}>
+          <Text {...components.imageHeader.labelStyle}>{name}</Text>
         </ImageHeader>
       )}
       {data.map(({ id, ...itemData }) => (
-        <DestinationItem key={id} data={itemData} {...itemSettings} />
+        <DestinationItem key={id} data={itemData} {...components.destinationItem} />
       ))}
     </Box>
   );
