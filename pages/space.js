@@ -15,7 +15,7 @@ const Home = () => (
       />
     </Head>
     <div className="layout">
-      <div className="container">
+      <div className="tiny-container">
         <h1 className="title fr-text-secondary">
           <img
             className="logo"
@@ -48,7 +48,7 @@ const Home = () => (
           display: flex;
           justify-content: center;
         }
-        .container {
+        .tiny-container {
           width: 600px;
         }
         .logo {
