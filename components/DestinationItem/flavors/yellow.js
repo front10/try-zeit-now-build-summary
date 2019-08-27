@@ -1,6 +1,6 @@
 export default {
   style: {
-    background: "-webkit-linear-gradient(170deg, #F8CF34 28%, #ffffff 28%)"
+    background: "-webkit-linear-gradient(170deg, #F8CF34 27.7%, #ffffff 28%)"
   },
   border: true,
   fareFooterItem: {
