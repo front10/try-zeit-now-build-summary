@@ -17,7 +17,7 @@ class ImageHeader extends React.Component {
     this.loaded = false;
     this.image = null;
     this.scrollParents = [];
-    this.id = `fr-image-${getUuid()}`;
+    this.id = `fr-image-2`;
   }
 
   componentDidUpdate = prevProps => {
