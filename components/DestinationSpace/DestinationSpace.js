@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import useStyles from "@front10/helpers/dist/UseStyles";
 import ImageHeader from "../ImageHeader";
-import Header from "../Header";
 import Box from "../Box";
 import Text from "../Text";
 import DestinationItem from "../DestinationItem";
@@ -13,24 +12,12 @@ const DestinationSpace = props => {
     image,
     name,
     data,
-    componentSettings: { itemSettings },
-    header,
-    showImage,
-    onKeyDown,
-    showCityName,
-    focusReferences,
-    focusable
+    itemSettings,
+    showImage
   } = props;
   const [className, style] = useStyles(props);
   return (
-    <Box
-      focusable={focusable}
-      tabIndex={focusable ? 0 : -1}
-      className={`${className} fr-destination-item`}
-      style={style}
-      focusReferences={focusReferences}
-      onKeyDown={onKeyDown}
-    >
+    <Box className={`${className} fr-destination-item`} style={style}>
       {showImage && (
         <ImageHeader {...imageProps} image={image}>
           <Text {...labelStyle}>{name}</Text>
@@ -61,37 +48,9 @@ DestinationSpace.propTypes = {
    */
   data: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)),
   /**
-   * Component that is going to render
-   */
-  componentSettings: PropTypes.objectOf(PropTypes.any),
-  /**
-   * Header props
-   */
-  header: PropTypes.objectOf(PropTypes.any),
-  /**
    * Determine if the image will be displayed in the component.
    */
-  showImage: PropTypes.bool,
-  /**
-   * Show or hide the city name
-   */
-  showCityName: PropTypes.bool,
-  /**
-   * OnKeyDown function.
-   */
-  onKeyDown: PropTypes.func,
-  /**
-   * FocusReferences functions
-   */
-  focusReferences: PropTypes.func,
-  /**
-   * Turn off or on tabIndex in the DestinationSpace
-   */
-  focusable: PropTypes.bool,
-  /**
-   * Show header in two lines
-   */
-  showHeaderBreak: PropTypes.bool
+  showImage: PropTypes.bool
 };
 DestinationSpace.defaultProps = {
   image: "",
@@ -100,14 +59,7 @@ DestinationSpace.defaultProps = {
   imageProps: {
     rounded: "2"
   },
-  componentSettings: {},
-  header: {},
-  showImage: true,
-  showCityName: true,
-  showHeaderBreak: false,
-  onKeyDown: () => {},
-  focusReferences: () => {},
-  focusable: false
+  showImage: true
 };
 DestinationSpace.componentName = "DestinationSpace";
 
