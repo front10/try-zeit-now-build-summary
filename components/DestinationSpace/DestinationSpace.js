@@ -36,11 +36,8 @@ const DestinationSpace = props => {
           <Text {...labelStyle}>{name}</Text>
         </ImageHeader>
       )}
-      {/* {showCityName && (
-        <Header {...header} customHtml={`Going to ${name}`} tag="h5" />
-      )} */}
-      {data.map(itemData => (
-        <DestinationItem data={itemData} {...itemSettings} />
+      {data.map(({ id, ...itemData }) => (
+        <DestinationItem key={id} data={itemData} {...itemSettings} />
       ))}
     </Box>
   );

@@ -35,7 +35,7 @@ const DepartureReturnDateAtom = props => {
 DepartureReturnDateAtom.propTypes = {
   departureDate: PropTypes.string,
   returnDate: PropTypes.string,
-  separator: PropTypes.stirng,
+  separator: PropTypes.string,
   showDepartureDate: PropTypes.bool,
   showReturnDate: PropTypes.bool,
   showSeparator: PropTypes.bool,

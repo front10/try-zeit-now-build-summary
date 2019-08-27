@@ -72,41 +72,6 @@ export default {
           }
         }
       }
-    },
-    data: [
-      {
-        destination: "To Mars",
-        departureDate: "03/13/2020",
-        returnDate: "04/04/2020",
-        rocket: "Falcon 9",
-        weight: 4020,
-        measureUnit: "kg",
-        price: "62",
-        currencySymbol: "$",
-        currencyCode: "M"
-      },
-      {
-        destination: "To Saturn",
-        departureDate: "07/13/2020",
-        returnDate: "09/09/2020",
-        rocket: "Falcon Heavy",
-        weight: 168000,
-        measureUnit: "kg",
-        price: "90",
-        currencySymbol: "$",
-        currencyCode: "M"
-      },
-      {
-        destination: "To Jupiter",
-        departureDate: "11/13/2020",
-        returnDate: "10/03/2020",
-        rocket: "Dragon",
-        weight: 6000,
-        measureUnit: "kg",
-        price: "78",
-        currencySymbol: "$",
-        currencyCode: "M"
-      }
-    ]
+    }
   }
 };
