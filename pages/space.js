@@ -16,7 +16,7 @@ const Home = () => (
     </Head>
     <div className="layout">
       <div className="tiny-container">
-        <h1 className="title fr-text-secondary">
+        <h1 className="title">
           <img
             className="logo"
             with="32"
