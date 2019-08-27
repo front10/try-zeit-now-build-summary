@@ -26,4 +26,4 @@ const mergeDeep = (target, ...sources) => {
   return mergeDeep(target, ...sources);
 };
 
-export { mergeDeepe };
+export { mergeDeep };

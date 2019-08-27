@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import useStyles from "@front10/helpers/dist/UseStyles";
 
-import Box from "../Box";
-import Text from "../Text";
+import Box from "../../Box";
+import Text from "../../Text";
 
 const RocketTypeAtom = props => {
   const [className, style] = useStyles(props);
