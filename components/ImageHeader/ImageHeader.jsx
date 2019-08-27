@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import PropTypes from "prop-types";
-import { getUuid } from "@front10/helpers/dist/uuid";
 import useStyles from "@front10/helpers/dist/UseStyles";
 import Box from "../Box";
 import Text from "../Text";
