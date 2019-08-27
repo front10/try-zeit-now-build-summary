@@ -1,5 +1,7 @@
-import Basic from "./basic";
+import basic from "./basic";
 
 const flavors = {
-  Basic
+  basic
 };
+
+export default flavors;

@@ -17,7 +17,7 @@ const DestinationSpace = props => {
     image,
     name,
     data,
-    componentSettings,
+    componentSettings: { itemSettings },
     translate,
     header,
     showImage,
@@ -55,7 +55,7 @@ const DestinationSpace = props => {
         <Header id={id} {...header} cust omHtml={`Going to ${name}`} tag="h5" />
       )}
       {data.map(itemData => (
-        <DestinationItem data={itemData} />
+        <DestinationItem data={itemData} {...itemSettings} />
       ))}
       {/* <ListColumns
         {...componentSettings}

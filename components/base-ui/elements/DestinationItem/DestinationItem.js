@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import useStyles from "@front10/helpers/dist/UseStyles";
-import Withflavors from "../../helpers/WithFlavors";
+import WithFlavors from "../../helpers/WithFlavors";
+import flavors from "./flavors";
 
 import Box from "../Box";
-import Text from "../Text";
-import Button from "../Button";
 import Destination from "./atoms/DestinationAtom";
 import DepartureReturnDate from "./atoms/DepartureReturnDateAtom";
 import RocketType from "./atoms/RocketTypeAtom";
@@ -53,58 +52,36 @@ const DestinationItem = props => {
 
 DestinationItem.propTypes = {
   showDestination: PropTypes.bool,
-
   showDepartureReturnDate: PropTypes.bool,
-
   showRocketType: PropTypes.bool,
-
   showPrice: PropTypes.bool,
-
   showCallToAction: PropTypes.bool,
-
   departureReturnDateStyles: PropTypes.objectOf(PropTypes.any),
-
   destinationStyles: PropTypes.objectOf(PropTypes.any),
-
   rocketTypeStyles: PropTypes.objectOf(PropTypes.any),
-
   priceStyles: PropTypes.objectOf(PropTypes.any),
-
   callToActionStyles: PropTypes.objectOf(PropTypes.any),
-
   fareBodyItem: PropTypes.objectOf(PropTypes.any),
-
   fareFooterItem: PropTypes.objectOf(PropTypes.any),
-
   data: PropTypes.objectOf(PropTypes.any)
 };
 
 DestinationItem.defaultProps = {
   showDestination: true,
-
   showDepartureReturnDate: true,
-
   showRocketType: true,
-
   showPrice: true,
-
   showCallToAction: true,
-
   departureReturnDateStyles: {},
-
   destinationStyles: {},
-
   rocketTypeStyles: {},
-
   priceStyles: {},
-
   callToActionStyles: {},
-
   fareBodyItem: {},
-
   fareFooterItem: {},
-
   data: {}
 };
 
-export default Withflavors(DestinationItem);
+DestinationItem.flavors = flavors;
+
+export default WithFlavors(DestinationItem);
