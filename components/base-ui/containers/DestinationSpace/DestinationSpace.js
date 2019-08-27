@@ -1,17 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { getUuid } from '@front10/helpers/dist/uuid';
-import useStyles from '@front10/helpers/dist/UseStyles';
-import ImageHeader from '../../elements/ImageHeader';
-import Header from '../../elements/Header';
-import Box from '../../elements/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import { getUuid } from "@front10/helpers/dist/uuid";
+import useStyles from "@front10/helpers/dist/UseStyles";
+import ImageHeader from "../../elements/ImageHeader";
+import Header from "../../elements/Header";
+import Box from "../../elements/Box";
+import Text from "../../elements/Text";
 // import ListColumns from '../../lists/ListColumns';
 // import FareItemMediumSize from '../FareItemMediumSize';
 // import ItemContainer from './atoms/ItemContainer';
 
 const DestinationSpace = props => {
   const {
-    imageProps,
+    imageProps: { labelStyle, ...imageProps },
     image,
     name,
     data,
@@ -28,7 +29,7 @@ const DestinationSpace = props => {
   } = props;
   const [className, style] = useStyles(props);
   const id = getUuid();
-  const origin = data[0] ? data[0].origin : '';
+  const origin = data[0] ? data[0].origin : "";
   return (
     <Box
       focusable={focusable}
@@ -41,6 +42,7 @@ const DestinationSpace = props => {
     >
       {showImage && (
         <ImageHeader {...imageProps} image={image} translate={translate}>
+          <Text {...labelStyle}>{name}</Text>
           {/* <ItemContainer
             {...imageProps.container}
             text={name}
@@ -49,12 +51,7 @@ const DestinationSpace = props => {
         </ImageHeader>
       )}
       {showCityName && (
-        <Header
-          id={id}
-          {...header}
-          customHtml={`Going to ${name}`}
-          tag="h5"
-        />
+        <Header id={id} {...header} cust omHtml={`Going to ${name}`} tag="h5" />
       )}
       {/* <ListColumns
         {...componentSettings}
@@ -136,10 +133,12 @@ DestinationSpace.propTypes = {
   oneColumn: PropTypes.bool
 };
 DestinationSpace.defaultProps = {
-  image: '',
-  name: '',
+  image: "",
+  name: "",
   data: [],
-  imageProps: {},
+  imageProps: {
+    rounded: "2"
+  },
   componentSettings: {},
   header: {},
   translate: () => {},
@@ -152,6 +151,6 @@ DestinationSpace.defaultProps = {
   focusable: false,
   oneColumn: true
 };
-DestinationSpace.componentName = 'DestinationSpace';
+DestinationSpace.componentName = "DestinationSpace";
 
 export default DestinationSpace;
