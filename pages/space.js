@@ -3,7 +3,7 @@ import React from "react";
 import DestinationSpace from "../components/DestinationSpace";
 import Text from "../components/Text";
 import Box from "../components/Box";
-import settings from "../settings";
+import settings from "../helpers/destinationSpaceSettings";
 
 const Home = () => (
   <div>
