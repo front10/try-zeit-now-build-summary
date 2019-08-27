@@ -90,21 +90,6 @@ const Home = () => (
               }
             }
           }}
-          // imageProps= {{
-          //   labelStyle: {
-          //     fontSize: "8",
-          //     textTransform: "uppercase",
-          //     textColor: "white"
-          //   },
-          //   rounded: "3",
-          //   display: "flex",
-          //   alignItems: "center",
-          //   justifyContent: "center"
-          // }}
-          // header={{
-          //   fontWeight: "bold",
-          //   marginTop: "2"
-          // }}
         />
         <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
