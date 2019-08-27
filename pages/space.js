@@ -18,7 +18,16 @@ const Home = () => (
 
     <div className="fr-row">
       <div className="fr-col-lg-6 fr-offset-lg-3 fr-col-xl-4 fr-offset-xl-4">
-        <h1 className="title fr-text-secondary">Build summary in the space</h1>
+        <h1 className="title fr-text-secondary">
+          <img
+            className="logo"
+            with="32"
+            height="32"
+            alt=""
+            src="/static/front10.png"
+          />
+          Build summary in the space
+        </h1>
         <DestinationSpace
           image="https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
           name="The Space"
@@ -95,6 +104,11 @@ const Home = () => (
         }
         .title {
           font-weight: normal;
+        }
+        .logo {
+          vertical-align: -5px;
+          border-radius: 4px;
+          margin-right: 0.5ch;
         }
       `}
     </style>
