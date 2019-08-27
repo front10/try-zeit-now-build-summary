@@ -52,7 +52,7 @@ const DestinationSpace = props => {
         </ImageHeader>
       )}
       {showCityName && (
-        <Header id={id} {...header} cust omHtml={`Going to ${name}`} tag="h5" />
+        <Header id={id} {...header} customHtml={`Going to ${name}`} tag="h5" />
       )}
       {data.map(itemData => (
         <DestinationItem data={itemData} />
