@@ -3,6 +3,7 @@ import React from "react";
 import DestinationSpace from "../components/DestinationSpace";
 import Text from "../components/Text";
 import Box from "../components/Box";
+import settings from "../settings";
 
 const Home = () => (
   <div>
@@ -25,66 +26,7 @@ const Home = () => (
           />
           Build summary in the space
         </h1>
-        <DestinationSpace
-          image="https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
-          name="The Space"
-          imageProps={{
-            labelStyle: {
-              fontSize: "8",
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              textColor: "white"
-            },
-            rounded: "3",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center"
-          }}
-          header={{
-            fontWeight: "bold",
-            marginTop: "2"
-          }}
-          componentSettings={{
-            itemSettings: {
-              flavor: "yellowInverted"
-            }
-          }}
-          data={[
-            {
-              destination: "To Mars",
-              departureDate: "03/13/2020",
-              returnDate: "04/04/2020",
-              rocket: "Falcon 9",
-              weight: 4020,
-              measureUnit: "kg",
-              price: "62",
-              currencySymbol: "$",
-              currencyCode: "M"
-            },
-            {
-              destination: "To Saturn",
-              departureDate: "07/13/2020",
-              returnDate: "09/09/2020",
-              rocket: "Falcon Heavy",
-              weight: 168000,
-              measureUnit: "kg",
-              price: "90",
-              currencySymbol: "$",
-              currencyCode: "M"
-            },
-            {
-              destination: "To Jupiter",
-              departureDate: "11/13/2020",
-              returnDate: "10/03/2020",
-              rocket: "Dragon",
-              weight: 6000,
-              measureUnit: "kg",
-              price: "78",
-              currencySymbol: "$",
-              currencyCode: "M"
-            }
-          ]}
-        />
+        <DestinationSpace {...settings.destinationSpace} />
         <Box textAlign="center">
           <Text>Made with 🖤 by Front10</Text>
         </Box>
