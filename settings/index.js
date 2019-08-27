@@ -1,4 +1,4 @@
-import dataMock from "../helpers/data.json"
+import dataMock from "../helpers/data.json";
 
 export default {
   destinationSpace: {

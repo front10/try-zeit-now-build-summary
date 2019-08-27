@@ -27,7 +27,7 @@ const Home = () => (
           Build summary in the space
         </h1>
         <DestinationSpace {...settings.destinationSpace} />
-        <Box textAlign="center">
+        <Box textAlign="center" marginTop="4">
           <Text>Made with 🖤 by Front10</Text>
         </Box>
       </div>
