@@ -3,10 +3,9 @@ export default {
     background: "-webkit-linear-gradient(170deg, #000000 28%, #ffffff 28%)"
   },
   border: true,
-  borderWidth: "1",
   rounded: "3",
   padding: "3",
-  marginBottom: "2",
+  marginHeight: "1",
   fontWeight: "bold",
   fareBodyItem: {
     flex: "2",

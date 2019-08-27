@@ -48,7 +48,7 @@ const Home = () => (
           }}
           componentSettings={{
             itemSettings: {
-              flavor: "basic"
+              flavor: "yellowInverted"
             }
           }}
           data={[
