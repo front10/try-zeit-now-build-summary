@@ -51,7 +51,7 @@ const Home = () => (
               padding: "3",
               marginHeight: "1",
               //-------------------------------------------------
-              // bgColor: black | danger | primary | secondary
+              // bgColor: black | danger | primary | secondary | etc
               //-------------------------------------------------              
               bgColor: "white",
               fontWeight: "normal",
