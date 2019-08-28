@@ -90,7 +90,7 @@ const Home = () => (
                 rounded: "2",
                 paddingWidth: "5",
                 paddingHeight: "2",
-                border: false
+                // border: false
               },
               priceStyles: {
                 width: "100",
