@@ -1,90 +1,135 @@
-import React from "react";
-import Link from "next/link";
 import Head from "next/head";
+import React from "react";
+import DestinationSpace from "../components/DestinationSpace";
 import Nav from "../components/nav";
+import Text from "../components/Text";
+import Box from "../components/Box";
+import Title from "../components/Title";
+import data from "../helpers/data.json";
+
 
 const Home = () => (
   <div>
     <Head>
-      <title>Home</title>
+      <title>Destination Space</title>
+      <link rel="shortcut icon" type="image/x-icon" href="/static/front10.ico" />
+      <link
+        href="https://cdn.front10.com/bootstrap4/index.min.css"
+        rel="stylesheet"
+      />
     </Head>
-
-    <Nav />
-
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className="row">
-        <Link href="/space">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next.js on GitHub and in their examples.</p>
-          </a>
-        </Link>
-        <Link href="https://github.com/zeit/next.js/tree/master/examples">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>Find other example boilerplates on the Next.js GitHub.</p>
-          </a>
-        </Link>
-        <Link href="https://github.com/zeit/next.js">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it!</p>
-          </a>
-        </Link>
+    <Nav/>
+    <div className="layout">
+      <div className="tiny-container fr-pt-3">
+        <DestinationSpace 
+          components={{
+            imageHeader: {
+              image:
+              "https://res.cloudinary.com/dakp804eh/topics/space/via-lactea.jpg",
+              title: "The Space",
+              labelStyle: {
+                fontSize: "8",
+                textTransform: "uppercase",
+                textColor: "white"
+              },
+              rounded: "3",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center"              
+            },
+            destinationItem: {
+              flavor: "dark",
+              // here
+              rounded: "3",
+              padding: "3",
+              marginHeight: "1",
+              fontWeight: "bold",
+              fareBodyItem: {
+                flex: "2",
+                display: "flex",
+                flexDirection: "column"
+              },
+              fareFooterItem: {
+                flex: "1",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "end"
+              },
+              destinationStyles: {
+                fontSize: "5",
+                textTransform: "uppercase",
+                marginBottom: "auto"
+              },
+              departureReturnDateStyles: {
+                separator: "-",
+                separatorStyles: {
+                  paddingWidth: "1"
+                }
+              },
+              rocketTypeStyles: {
+                separator: "|",
+                separatorStyles: {
+                  paddingWidth: "2"
+                }
+              },
+              callToActionStyles: {
+                callToActionText: "Let's go",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+                rounded: "0",
+                paddingWidth: "5",
+                borderWidth: "0"
+              },
+              priceStyles: {
+                width: "100",
+                textAlign: "center",
+                fontSize: "6",
+                marginBottom: "3",
+                currencySymbolStyles: {
+                  marginRight: "1"
+                }
+              }
+            }
+          }}
+          data={data}
+        />
+        <Box textAlign="center" marginTop="4">
+          <Text>Made with 🖤 by <a href="http://front10.com">Front10</a></Text>
+        </Box>
       </div>
     </div>
 
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
-    `}</style>
+    <style jsx global>
+      {`
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
+        }
+        .title {
+          font-weight: normal;
+        }
+        .layout {
+          display: flex;
+          justify-content: center;
+          background-image: linear-gradient(rgba(227, 227, 227, 0.7) .01em, transparent .1em), linear-gradient(90deg, rgba(236, 236, 236, 0.7) .01em, transparent .1em);
+          background-size: 2em 2em;          
+        }
+        .tiny-container {
+          width: 600px;
+        }
+        .logo {
+          vertical-align: -5px;
+          border-radius: 4px;
+          margin-right: 0.5ch;
+        }
+        a {
+          color: #067df7;
+          text-decoration: none;
+        }
+      `}
+    </style>
   </div>
 );
 

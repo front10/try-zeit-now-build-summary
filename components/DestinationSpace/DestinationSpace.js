@@ -2,18 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import useStyles from "@front10/helpers/dist/UseStyles";
 import ImageHeader from "../ImageHeader";
-import Header from "../Header";
 import Box from "../Box";
 import Text from "../Text";
 import DestinationItem from "../DestinationItem";
 
 const DestinationSpace = props => {
   const {
-    imageProps: { labelStyle, ...imageProps },
     image,
-    name,
+    title,
     data,
-    componentSettings: { itemSettings },
     components,
     showImage,
     onKeyDown,
@@ -25,14 +22,14 @@ const DestinationSpace = props => {
     <Box
       focusable={focusable}
       tabIndex={focusable ? 0 : -1}
-      className={`${className} fr-destination-item`}
+      className={`${className}`}
       style={style}
       focusReferences={focusReferences}
       onKeyDown={onKeyDown}
     >
       {showImage && (
-        <ImageHeader {...components.imageHeader} image={image}>
-          <Text {...components.imageHeader.labelStyle}>{name}</Text>
+        <ImageHeader {...components.imageHeader}>
+          <Text {...components.imageHeader.labelStyle}>{components.imageHeader.title}</Text>
         </ImageHeader>
       )}
       {data.map(({ id, ...itemData }) => (
