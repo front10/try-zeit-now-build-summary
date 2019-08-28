@@ -7,8 +7,6 @@ export default {
     textColor: "white",
     border: true,
     borderWidth: "1",
-    style: {
-      backgroundColor: "black"
-    }
+    bgColor: "black"
   }
 };
