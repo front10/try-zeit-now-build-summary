@@ -29,7 +29,8 @@ const Home = () => (
               labelStyle: {
                 fontSize: "8",
                 textTransform: "uppercase",
-                textColor: "white"
+                textColor: "white",
+                fontWeight: "bold"
               },
               imageBgPos: "center",
               rounded: "3",
@@ -67,6 +68,9 @@ const Home = () => (
                 separator: "-",
                 separatorStyles: {
                   paddingWidth: "1"
+                },
+                style: {
+                  lineHeight: 2
                 }
               },
               rocketTypeStyles: {
