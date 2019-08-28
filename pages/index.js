@@ -23,7 +23,7 @@ const Home = () => (
     </Head>
     <Nav />
     <div className="layout">
-      <div className="tiny-container fr-pt-3">
+      <div className="tiny-container fr-py-3">
         <DestinationSpace
           components={{
             imageHeader: {
@@ -91,7 +91,7 @@ const Home = () => (
                 rounded: "2",
                 paddingWidth: "5",
                 paddingHeight: "2",
-                border: false
+                // border: false
               },
               priceStyles: {
                 width: "100",
@@ -107,16 +107,17 @@ const Home = () => (
           }}
           data={data}
         />
-        <Box textAlign="center" marginTop="4">
-          <Text>
-            Made with 🖤 by{" "}
-            <a target="_blank" href="http://front10.com">
-              Front10
-            </a>
-          </Text>
-        </Box>
       </div>
     </div>
+    <Box textAlign="center" marginTop="4">
+      <Text>
+        Made with 🖤 by{" "}
+        <a target="_blank" href="http://front10.com">
+          Front10
+        </a>
+      </Text>
+    </Box>
+
     <style jsx global>
         {globalStyles}
     </style>

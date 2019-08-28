@@ -9,7 +9,6 @@ export default {
   callToActionStyles: {
     color: "none",
     bgColor: "white",
-    border: true,
     style: {
       borderColor: "black"
     }
