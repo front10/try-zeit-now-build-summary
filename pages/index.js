@@ -45,7 +45,7 @@ const Home = () => (
               rounded: "3",
               padding: "3",
               marginHeight: "1",
-              fontWeight: "bold",
+              fontWeight: "normal",
               fareBodyItem: {
                 flex: "2",
                 display: "flex",
@@ -59,6 +59,7 @@ const Home = () => (
               },
               destinationStyles: {
                 fontSize: "5",
+                fontWeight: "bold",
                 textTransform: "uppercase",
                 marginBottom: "auto"
               },
@@ -84,6 +85,7 @@ const Home = () => (
               },
               priceStyles: {
                 width: "100",
+                fontWeight: "bold",
                 textAlign: "center",
                 fontSize: "6",
                 marginBottom: "3",
