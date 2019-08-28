@@ -16,7 +16,7 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <span>Fork me, tweak me and <a target="_blank" href="https://github.com/front10/try-zeit-now-build-summary/pulls">Submit a PR</a> to play with <a href="https://zeit.co/blog/build-summary" target="_blank">ZEIT Build Summaries</a>.😀</span>
+        <span>Fork me, tweak me and <a target="_blank" href="https://github.com/front10/try-zeit-now-build-summary/pulls">Submit a PR</a> to play with <a href="https://zeit.co/blog/build-summary" target="_blank">ZEIT Build Summary</a>.😀</span>
       </li>
       <li>
         <a target="_blank" href="https://github.com/front10/try-zeit-now-build-summary/pulls">GitHub</a>
