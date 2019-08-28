@@ -49,6 +49,9 @@ const Home = () => (
               flavor: "basic",
               padding: "3",
               marginHeight: "1",
+              //-------------------------------------------------
+              // bgColor: primary | secondary | danger
+              //-------------------------------------------------
               bgColor: "white",
               border: true,
               fontWeight: "normal",
