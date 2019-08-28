@@ -22,7 +22,7 @@ const Home = () => (
     </Head>
     <Nav />
     <div className="layout">
-      <div className="tiny-container fr-pt-3">
+      <div className="tiny-container fr-py-3">
         <DestinationSpace
           components={{
             imageHeader: {
