@@ -154,6 +154,9 @@ const Home = () => (
           color: #067df7;
           text-decoration: none;
         }
+        .fr-bg-black {
+          background-color: black!important;
+        };
       `}
     </style>
   </div>
