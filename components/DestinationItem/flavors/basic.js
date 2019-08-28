@@ -1,9 +1,14 @@
 export default {
-  border: true,
+  rounded: "3",
+  destinationStyles: {
+    fontSize: "5"
+  },
   callToActionStyles: {
     textColor: "white",
-    border: true,
-    borderWidth: "1",
-    bgColor: "black"
+    bgColor: "black",
+    rounded: "2"
+  },
+  priceStyles: {
+    fontSize: "6"
   }
 };
