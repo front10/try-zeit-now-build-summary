@@ -25,7 +25,7 @@ const Home = () => (
             imageHeader: {
               image:
               "https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=814&q=80",
-              title: "From HEARTH",
+              title: "From EARTH",
               labelStyle: {
                 fontSize: "8",
                 textTransform: "uppercase",
