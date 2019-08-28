@@ -9,6 +9,7 @@ const Home = () => (
   <div>
     <Head>
       <title>Destination Space</title>
+      <link rel="shortcut icon" type="image/x-icon" href="/static/front10.ico" />
       <link
         href="https://cdn.front10.com/bootstrap4/index.min.css"
         rel="stylesheet"
