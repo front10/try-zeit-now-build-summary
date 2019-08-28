@@ -46,7 +46,7 @@ const Home = () => (
               //-------------------------------------------------
               // flavor: basic | dark | yellow | yellowInverted
               //-------------------------------------------------
-              flavor: "basic",
+              flavor: "yellowInverted",
               padding: "3",
               marginHeight: "1",
               //-------------------------------------------------
