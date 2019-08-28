@@ -22,7 +22,7 @@ const Home = () => (
         <DestinationSpace 
           data={data}
           image=
-          "https://images.unsplash.com/photo-1472712739516-7ad2b786e1f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+          "https://res.cloudinary.com/dakp804eh/topics/space/via-lactea.jpg"
           name= "The Space"
           components={{
             imageHeader: {
