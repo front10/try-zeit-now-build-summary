@@ -103,7 +103,7 @@ const Home = () => (
           data={data}
         />
         <Box textAlign="center" marginTop="4">
-          <Text>Made with 🖤 by <a href="http://front10.com">Front10</a></Text>
+          <Text>Made with 🖤 by <a target="_blank" href="http://front10.com">Front10</a></Text>
         </Box>
       </div>
     </div>
