@@ -10,6 +10,8 @@ export default {
     color: "none",
     bgColor: "white",
     border: true,
-    borderWidth: "1"
+    style: {
+      borderColor: "black"
+    }
   }
 };
