@@ -45,11 +45,14 @@ const Home = () => (
             destinationItem: {
               //-------------------------------------------------
               // flavor: basic | dark | yellow | yellowInverted
-              //---------------------
+              //-------------------------------------------------
               flavor: "basic",
               rounded: "3",
               padding: "3",
               marginHeight: "1",
+              //-------------------------------------------------
+              // bgColor: black | danger | primary | secondary | etc
+              //-------------------------------------------------              
               bgColor: "white",
               fontWeight: "normal",
               leftSectionItem: {
