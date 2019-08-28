@@ -45,7 +45,7 @@ const Home = () => (
             destinationItem: {
               //-------------------------------------------------
               // flavor: basic | dark | yellow | yellowInverted
-              //---------------------
+              //-------------------------------------------------
               flavor: "basic",
               rounded: "3",
               padding: "3",
