@@ -7,7 +7,6 @@ export default {
     textColor: "black"
   },
   callToActionStyles: {
-    borderColor: "black",
     textColor: "white",
     color: "none",
     style: {
