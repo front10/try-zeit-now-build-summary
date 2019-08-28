@@ -7,24 +7,23 @@ import Text from "../Text";
 import DestinationItem from "../DestinationItem";
 
 const DestinationSpace = props => {
-  const {
-    imageProps: { labelStyle, ...imageProps },
-    image,
-    name,
-    data,
-    itemSettings,
-    showImage
-  } = props;
+  const { data, components, showImage } = props;
   const [className, style] = useStyles(props);
   return (
-    <Box className={`${className} fr-destination-item`} style={style}>
+    <Box className={`${className}`} style={style}>
       {showImage && (
-        <ImageHeader {...imageProps} image={image}>
-          <Text {...labelStyle}>{name}</Text>
+        <ImageHeader {...components.imageHeader}>
+          <Text {...components.imageHeader.labelStyle}>
+            {components.imageHeader.title}
+          </Text>
         </ImageHeader>
       )}
       {data.map(({ id, ...itemData }) => (
-        <DestinationItem key={id} data={itemData} {...itemSettings} />
+        <DestinationItem
+          key={id}
+          data={itemData}
+          {...components.destinationItem}
+        />
       ))}
     </Box>
   );

@@ -19,7 +19,7 @@ const isElementInViewport = id => {
  * @param {number} heightDestinationImage
  * @param {number} widthDestinationImage
  */
-const loadImage = (loaded, imageNode, image, heightImage, widthImage, pathNoImageFound) => {
+const loadImage = (loaded, imageNode, image, heightImage, widthImage, pathNoImageFound, imageBgPos) => {
   if (!loaded) {
     const hdLoaderImg = new Image();
     hdLoaderImg.src = image;
@@ -27,7 +27,7 @@ const loadImage = (loaded, imageNode, image, heightImage, widthImage, pathNoImag
       if (imageNode) {
         imageNode.setAttribute(
           'style',
-          `background-image: url('${image}');height: ${heightImage};width: ${widthImage}`
+          `background-image: url('${image}');height: ${heightImage};width: ${widthImage}; background-position: ${imageBgPos};`
         );
         const imageLabelNode = imageNode.querySelector('.cmp-image-label');
         if (imageLabelNode) {

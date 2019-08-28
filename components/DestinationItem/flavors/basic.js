@@ -1,8 +1,14 @@
 export default {
-  style: {
-    background: "-webkit-linear-gradient(170deg, #ffec32 27.7%, #efefef 28%)"
+  border: true,
+  fareFooterItem: {
+    textColor: "black"
   },
   callToActionStyles: {
-    color: "primary"
+    textColor: "white",
+    border: true,
+    borderWidth: "1",
+    style: {
+      backgroundColor: "black"
+    }
   }
 };

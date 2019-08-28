@@ -29,8 +29,7 @@ const Home = () => (
               labelStyle: {
                 fontSize: "8",
                 textTransform: "uppercase",
-                textColor: "white",
-                fontWeight: "bold"
+                textColor: "white"
               },
               imageBgPos: "center",
               rounded: "3",
@@ -40,13 +39,14 @@ const Home = () => (
             },
             destinationItem: {
               //-------------------------------------------------
-              // flavor: basic | dark | yellow | yellowInverted
+              // flavor: basic | dark | yellow | yellowinverted
               //---------------------
-              flavor: "basic",
+              flavor: "yellow",
+              // here
               rounded: "3",
               padding: "3",
               marginHeight: "1",
-              fontWeight: "normal",
+              fontWeight: "bold",
               fareBodyItem: {
                 flex: "2",
                 display: "flex",
@@ -60,7 +60,6 @@ const Home = () => (
               },
               destinationStyles: {
                 fontSize: "5",
-                fontWeight: "bold",
                 textTransform: "uppercase",
                 marginBottom: "auto"
               },
@@ -68,9 +67,6 @@ const Home = () => (
                 separator: "-",
                 separatorStyles: {
                   paddingWidth: "1"
-                },
-                style: {
-                  lineHeight: 2
                 }
               },
               rocketTypeStyles: {
@@ -83,14 +79,12 @@ const Home = () => (
                 callToActionText: "Let's go",
                 fontWeight: "bold",
                 textTransform: "uppercase",
-                rounded: "2",
+                rounded: "0",
                 paddingWidth: "5",
-                paddingHeight: "2",
                 borderWidth: "0"
               },
               priceStyles: {
                 width: "100",
-                fontWeight: "bold",
                 textAlign: "center",
                 fontSize: "6",
                 marginBottom: "3",
@@ -103,7 +97,7 @@ const Home = () => (
           data={data}
         />
         <Box textAlign="center" marginTop="4">
-          <Text>Made with 🖤 by <a target="_blank" href="http://front10.com">Front10</a></Text>
+          <Text>Made with 🖤 by <a href="http://front10.com">Front10</a></Text>
         </Box>
       </div>
     </div>

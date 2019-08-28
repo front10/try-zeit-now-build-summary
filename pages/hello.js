@@ -1,40 +1,34 @@
 import Head from "next/head";
 import React from "react";
-import DestinationSpace from "../components/DestinationSpace";
+import Nav from "../components/nav";
 import Text from "../components/Text";
 import Box from "../components/Box";
-import settings from "../helpers/destinationSpaceSettings";
+import Header from "../components/Header";
 
-const Home = () => (
+
+const Hello = () => (
   <div>
     <Head>
-      <title>Destination Space</title>
+      <title>Hello page</title>
       <link rel="shortcut icon" type="image/x-icon" href="/static/front10.ico" />
       <link
         href="https://cdn.front10.com/bootstrap4/index.min.css"
         rel="stylesheet"
       />
     </Head>
+    <Nav/>
     <div className="layout">
-      <div className="tiny-container">
-        <h1 className="title">
-          <img
-            className="logo"
-            with="32"
-            height="32"
-            alt=""
-            src="/static/front10.png"
-          />
-          Build summary in the space
-        </h1>
-        <DestinationSpace {...settings.destinationSpace} />
+      <div className="tiny-container fr-pt-3">
+        <Box textAlign="center" marginBottom="400px">
+          <Header content="Hello" fontSize="54px"/>
+        </Box>        
         <Box textAlign="center" marginTop="4">
-          <Text>Made with 🖤 by Front10</Text>
+          <Text>Made with 🖤 by <a href="http://front10.com">Front10</a></Text>
         </Box>
       </div>
     </div>
 
-    <style jsx global>
+    <style jsx global>  
       {`
         body {
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -48,6 +42,8 @@ const Home = () => (
         .layout {
           display: flex;
           justify-content: center;
+          background-image: linear-gradient(rgba(227, 227, 227, 0.7) .01em, transparent .1em), linear-gradient(90deg, rgba(236, 236, 236, 0.7) .01em, transparent .1em);
+          background-size: 2em 2em;          
         }
         .tiny-container {
           width: 600px;
@@ -57,9 +53,13 @@ const Home = () => (
           border-radius: 4px;
           margin-right: 0.5ch;
         }
+        a {
+          color: #067df7;
+          text-decoration: none;
+        }
       `}
     </style>
   </div>
 );
 
-export default Home;
+export default Hello;

@@ -24,14 +24,15 @@ class ImageHeader extends React.Component {
   };
 
   handleLoadImage = () => {
-    const { image, imageHeight, imageWidth, pathNoImageFound } = this.props;
+    const { image, imageHeight, imageWidth, pathNoImageFound, imageBgPos } = this.props;
     this.image = loadImage(
       this.loaded,
       this.image,
       image,
       imageHeight,
       imageWidth,
-      pathNoImageFound
+      pathNoImageFound,
+      imageBgPos
     );
   };
 
@@ -203,7 +204,8 @@ ImageHeader.defaultProps = {
     padding: "3",
     bottom: "0",
     right: "0"
-  }
+  },
+  imageBgPos: "inherit"
 };
 
 ImageHeader.componentName = "ImageHeader";
