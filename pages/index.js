@@ -83,8 +83,9 @@ const Home = () => (
                 callToActionText: "Let's go",
                 fontWeight: "bold",
                 textTransform: "uppercase",
-                rounded: "0",
+                rounded: "2",
                 paddingWidth: "5",
+                paddingHeight: "2",
                 borderWidth: "0"
               },
               priceStyles: {
