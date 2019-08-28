@@ -6,25 +6,28 @@ import Text from "../components/Text";
 import Box from "../components/Box";
 import data from "../helpers/data.json";
 
-
 const Home = () => (
   <div>
     <Head>
       <title>Destination Space</title>
-      <link rel="shortcut icon" type="image/x-icon" href="/static/front10.ico" />
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="/static/front10.ico"
+      />
       <link
         href="https://cdn.front10.com/bootstrap4/index.min.css"
         rel="stylesheet"
       />
     </Head>
-    <Nav/>
+    <Nav />
     <div className="layout">
       <div className="tiny-container fr-pt-3">
-        <DestinationSpace 
+        <DestinationSpace
           components={{
             imageHeader: {
               image:
-              "https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=814&q=80",
+                "https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=814&q=80",
               title: "From EARTH",
               labelStyle: {
                 fontSize: "8",
@@ -36,7 +39,7 @@ const Home = () => (
               rounded: "3",
               display: "flex",
               alignItems: "center",
-              justifyContent: "center"              
+              justifyContent: "center"
             },
             destinationItem: {
               //-------------------------------------------------
@@ -46,13 +49,14 @@ const Home = () => (
               rounded: "3",
               padding: "3",
               marginHeight: "1",
+              bgColor: "white",
               fontWeight: "normal",
-              fareBodyItem: {
+              leftSectionItem: {
                 flex: "2",
                 display: "flex",
                 flexDirection: "column"
               },
-              fareFooterItem: {
+              rightSectionItem: {
                 flex: "1",
                 display: "flex",
                 flexDirection: "column",
@@ -103,7 +107,12 @@ const Home = () => (
           data={data}
         />
         <Box textAlign="center" marginTop="4">
-          <Text>Made with 🖤 by <a target="_blank" href="http://front10.com">Front10</a></Text>
+          <Text>
+            Made with 🖤 by{" "}
+            <a target="_blank" href="http://front10.com">
+              Front10
+            </a>
+          </Text>
         </Box>
       </div>
     </div>
@@ -122,8 +131,16 @@ const Home = () => (
         .layout {
           display: flex;
           justify-content: center;
-          background-image: linear-gradient(rgba(227, 227, 227, 0.7) .01em, transparent .1em), linear-gradient(90deg, rgba(236, 236, 236, 0.7) .01em, transparent .1em);
-          background-size: 2em 2em;          
+          background-image: linear-gradient(
+              rgba(227, 227, 227, 0.7) 0.01em,
+              transparent 0.1em
+            ),
+            linear-gradient(
+              90deg,
+              rgba(236, 236, 236, 0.7) 0.01em,
+              transparent 0.1em
+            );
+          background-size: 2em 2em;
         }
         .tiny-container {
           width: 600px;

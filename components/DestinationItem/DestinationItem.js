@@ -24,8 +24,8 @@ const DestinationItem = props => {
     rocketTypeStyles,
     priceStyles,
     callToActionStyles,
-    fareBodyItem,
-    fareFooterItem,
+    leftSectionItem,
+    rightSectionItem,
     data
   } = props;
 
@@ -35,14 +35,14 @@ const DestinationItem = props => {
       className={`DestinationItem ${className}`}
       style={style}
     >
-      <Box {...fareBodyItem}>
+      <Box {...leftSectionItem}>
         {showDestination && <Destination {...data} {...destinationStyles} />}
         {showDepartureReturnDate && (
           <DepartureReturnDate {...data} {...departureReturnDateStyles} />
         )}
         {showRocketType && <RocketType {...data} {...rocketTypeStyles} />}
       </Box>
-      <Box {...fareFooterItem}>
+      <Box {...rightSectionItem}>
         {showPrice && <Price {...data} {...priceStyles} />}
         {showCallToAction && <CallToAction {...data} {...callToActionStyles} />}
       </Box>
@@ -61,8 +61,8 @@ DestinationItem.propTypes = {
   rocketTypeStyles: PropTypes.objectOf(PropTypes.any),
   priceStyles: PropTypes.objectOf(PropTypes.any),
   callToActionStyles: PropTypes.objectOf(PropTypes.any),
-  fareBodyItem: PropTypes.objectOf(PropTypes.any),
-  fareFooterItem: PropTypes.objectOf(PropTypes.any),
+  leftSectionItem: PropTypes.objectOf(PropTypes.any),
+  rightSectionItem: PropTypes.objectOf(PropTypes.any),
   data: PropTypes.objectOf(PropTypes.any)
 };
 
@@ -77,8 +77,8 @@ DestinationItem.defaultProps = {
   rocketTypeStyles: {},
   priceStyles: {},
   callToActionStyles: {},
-  fareBodyItem: {},
-  fareFooterItem: {},
+  leftSectionItem: {},
+  rightSectionItem: {},
   data: {}
 };
 

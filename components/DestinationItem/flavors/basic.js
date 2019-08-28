@@ -1,6 +1,6 @@
 export default {
   border: true,
-  fareFooterItem: {
+  rightSectionItem: {
     textColor: "black"
   },
   callToActionStyles: {

@@ -30,12 +30,12 @@ export default {
       padding: "3",
       marginHeight: "1",
       fontWeight: "bold",
-      fareBodyItem: {
+      leftSectionItem: {
         flex: "2",
         display: "flex",
         flexDirection: "column"
       },
-      fareFooterItem: {
+      rightSectionItem: {
         flex: "1",
         display: "flex",
         flexDirection: "column",

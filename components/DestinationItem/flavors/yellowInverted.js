@@ -3,7 +3,7 @@ export default {
     background: "-webkit-linear-gradient(170deg, #000000 28.7%, #ffffff 29%)"
   },
   border: true,
-  fareFooterItem: {
+  rightSectionItem: {
     textColor: "white"
   },
   callToActionStyles: {
