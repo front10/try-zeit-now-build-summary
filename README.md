@@ -1,4 +1,4 @@
-# Build Summary Integration by ZEIT Now Playground
+# Let's try Build Summary Integration by ZEIT Now
 
 [Build Summary](https://zeit.co/blog/build-summary) is a badass new feature by [ZEIT Now](https://zeit.co). This integration analyzes your deployments, detects changed pages, and keeps a comment updated in your PR.
 
